@@ -85,7 +85,6 @@ export const Svg = ({data, visible}) => {
     return (
 
         <div ref={svgWrapperRef} className='background'>
-            {console.log('hey')}
                 <svg ref={svgRef}>
                     <g className="axes" style={{color: 'white'}}>
                         <g className='grid'/>
