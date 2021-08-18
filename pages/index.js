@@ -167,45 +167,45 @@ function App() {
       <div className="flex-container">       
         <div className="card">
           <p> 
-            Let's use a very simplified neural net as our starting point to see how finding the right weights for our inputs is analogous to finding the right linear transformations to classify our data.
-            We'll start off with something very simple: a <a href="https://en.wikipedia.org/wiki/Linear_classifier">linear classifier</a>. 
-            We'll motivate the need for non-linearities and the usefulness of adding layers later on.
+            Let&apos;s use a very simplified neural net as our starting point to see how finding the right weights for our inputs is analogous to finding the right linear transformations to classify our data.
+            We&apos;ll start off with something very simple: a <a href="https://en.wikipedia.org/wiki/Linear_classifier">linear classifier</a>. 
+            We&apos;ll motivate the need for non-linearities and the usefulness of adding layers later on.
           </p>   
         </div>
         <div className="card">
           <p>
-            If you're not already familiar with how matrices encode linear transformations, <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE">here</a>'s an excellent video by Grant Sanderson.
+            If you&apos;re not already familiar with how matrices encode linear transformations, <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE">here</a>&apos;s an excellent video by Grant Sanderson.
           </p>   
         </div>
         <div className="card">
           <p>
-          If we start off with the coordinate system we're all used to from school, we can think of a matrix multplication by some 2x2 matrix <b>A</b> as taking the unit vector along the x-axis to the first column of our matrix <b>A</b>  and taking the unit vector along the y-axis to the second column of our matrix <b>A</b>. If you find this confusing, go and watch the video!
+          If we start off with the coordinate system we&apos;re all used to from school, we can think of a matrix multplication by some 2x2 matrix <b>A</b> as taking the unit vector along the x-axis to the first column of our matrix <b>A</b>  and taking the unit vector along the y-axis to the second column of our matrix <b>A</b>. If you find this confusing, go and watch the video!
           </p>
         </div>
         <div className="card">
-          <p>Let's see a linear transformation in action. Press the button and see how it affects the circles! </p>
+          <p>Let&apos;s see a linear transformation in action. Press the button and see how it affects the circles! </p>
           <button onClick={reduceToXAxis}>Linear Transformation</button> 
         </div>
         <div className="card">
           <p>
             Our transformation pushed all of the circles to the x-axis. What would the matrix representation of this linear transformation look like? Our x-coordinates stayed the same, so the first column of our matrix is (1, 0). 
-            What about the second column? Remember that the second column maps our original y-coordinates. Let's look at the point (0, 1) before the transformation, and notice that it gets mapped to (0, 0). So our second column of <b>A</b> is (0, 0).
+            What about the second column? Remember that the second column maps our original y-coordinates. Let&apos;s look at the point (0, 1) before the transformation, and notice that it gets mapped to (0, 0). So our second column of <b>A</b> is (0, 0).
           </p>
         </div>
         <div className="card" ref={ref} >
-          <p>Let's spread the data around again and look at a more complicated example.</p>
+          <p>Let&apos;s spread the data around again and look at a more complicated example.</p>
         </div>
         <div className="card">
           <p>
             Suppose we wanted our classifier to give us a single value for whether a data point is red or blue.
-            We input a circle's coordinates (2-dimensional) and get back either a positive or a negative value.
-            One way we could go about building such a classifier is to find the right linear transformations that map our data in such a way, that we could simply read the results from the y-coordinate: let's choose red to be positive and blue to be negative. 
+            We input a circle&apos;s coordinates (2-dimensional) and get back either a positive or a negative value.
+            One way we could go about building such a classifier is to find the right linear transformations that map our data in such a way, that we could simply read the results from the y-coordinate: let&apos;s choose red to be positive and blue to be negative. 
           </p>
         </div>
         <div className="card">
           <p>
-            We'll break our linear transformation into two simpler ones to get very close to our desired result.
-            We already saw the matrix that collapsed our circles to the x-axis, so let's try that one again:
+            We&apos;ll break our linear transformation into two simpler ones to get very close to our desired result.
+            We already saw the matrix that collapsed our circles to the x-axis, so let&apos;s try that one again:
           </p>
           <button onClick={reduceToXAxis}>⎡ 1 0 ⎤ <br/> ⎣ 0 0 ⎦</button> 
         </div>
@@ -226,21 +226,21 @@ function App() {
         </div>
         <div className="card">
           <p>
-            We're almost there. 
+            We&apos;re almost there. 
             Our aim was to transform our data onto the y-axis in such a manner that the red circles would give a positive value, and the blue circles a negative one. 
-            All we have to do now (by eyeballing the data) is shift our data down by 1. Let's add this bias to our layer:
+            All we have to do now (by eyeballing the data) is shift our data down by 1. Let&apos;s add this bias to our layer:
           </p>
           <button onClick={() => shiftByConstant(0, -1)}>⎡ 0 ⎤<br/>⎣ -1 ⎦</button>
         </div>
         <div className="card">
           <p>
             Since we added the bias, our transformation is no longer a strictly linear one. 
-            It's now called an affine transformation. <a href="https://www.youtube.com/watch?v=E3Phj6J287o">Here</a>'s a short video on  affine transformations and how they can be seen as linear ones. 
+            It&apos;s now called an affine transformation. <a href="https://www.youtube.com/watch?v=E3Phj6J287o">Here</a>&apos;s a short video on  affine transformations and how they can be seen as linear ones. 
           </p>
         </div>
         <div className="card">
           <p>
-            Next we'll look at data that would be impossible to separate with only these tools, and we'll get closer to the structure of a typical neural network.
+            Next we&apos;ll look at data that would be impossible to separate with only these tools, and we&apos;ll get closer to the structure of a typical neural network.
           </p>
         </div>
       </div>
