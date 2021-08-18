@@ -1,1 +1,1 @@
-Re-implementing an earlier site in Next. Some linear algebra and machine learning.
+Reimplementing an earlier site in Next. Some linear algebra and machine learning.

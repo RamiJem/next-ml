@@ -211,7 +211,7 @@ function App() {
         </div>
         <div className="card">
           <p>
-            Since our intention was to transform our points to the y-axis (though perhaps choosing our values from the x-axis would have been simpler), we'll have to rotate the x-axis to the y-axis:
+            Since our intention was to transform our points to the y-axis (though perhaps choosing our values from the x-axis would have been simpler), we&apos;ll have to rotate the x-axis to the y-axis:
           </p>
           <button onClick={transformToYAxis}>⎡ 0 0 ⎤ <br/> ⎣ 1 0 ⎦</button> 
           <br/><br/>
